@@ -43,7 +43,7 @@ The website was designed to present services, prices, and booking options in a c
 **Elvira David**  
 Aspiring Web Designer & Front-End Developer  
 [davidelvira042@gmail.com](mailto:davidelvira042@gmail.com)  
-[GitHub Profile](https://github.com/davidelvira042)
+
 
 ---
 
