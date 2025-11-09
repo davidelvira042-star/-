@@ -1,0 +1,319 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Акцентный цвет */
+.accent, .text-accent {
+  color: #FF00C8;
+}
+
+.btn-outline-accent {
+  border: 2px solid #FF00C8;
+  color: #FF00C8;
+  transition: all 0.3s ease;
+}
+.btn-outline-accent:hover {
+  background-color: #FF00C8;
+  color: white;
+}
+
+/* Навигация */
+.navbar {
+  padding: 1rem 0;
+}
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* Хедер  */
+.hero {
+  min-height: 700px; /* увеличена минимальная высота */
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3));
+  z-index: 1;
+}
+.hero .overlay {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.hero h1 .accent {
+  color: #FF00C8;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Кнопка записаться */
+.btn-outline-accent {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  background-color: #FF00C8;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-outline-accent:hover {
+  background-color: #e000b5;
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.6);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Заголовки секций */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+/* Карточки услуг*/
+.card.bg-black {
+  background:black;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+.card.bg-black:hover {
+  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.4);
+  border-color: #FF00C8;
+}
+.card.bg-black .card-img-top {
+  border-bottom: 1px solid #222;
+  object-fit: cover;
+}
+.card.bg-black .card-body {
+  padding: 1.5rem;
+}
+.card.bg-black .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.card.bg-black p,
+.card.bg-black ul {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.card.bg-black p span.text-accent,
+.card.bg-black .price {
+  color: #FF00C8;
+  font-weight: 600;
+}
+
+/* Прайс */
+#price {
+  background: #000;
+  padding: 3rem 1rem;
+  color: #fff;
+}
+#price .section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.card.price-card {
+  background: #000;
+  border: 1px solid #444;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.card.price-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.card.price-card .card-body {
+  padding: 1rem;
+}
+.card.price-card h3 {
+  font-size: 1.2rem;
+  color: #FF00C8;
+  margin-bottom: 0.75rem;
+}
+.card.price-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+.card.price-card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+.card.price-card .price {
+  color: #FF00C8;
+  font-weight: 600;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  #price .row {
+    flex-direction: column;
+  }
+}
+
+/* Галерея */
+#gallery img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.4);
+}
+
+/* Секция контактов */
+#contacts {
+  background-color: black;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+#contacts .form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+#contacts .form-group i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #FF00C8;
+}
+#contacts .form-control, #contacts .form-select, #contacts textarea {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding-left: 2.5rem;
+}
+#contacts .form-control::placeholder, #contacts .form-select {
+  color: #aaa;
+}
+#contacts .form-control:focus, #contacts .form-select:focus {
+  border-color: #FF00C8;
+  box-shadow: none;
+}
+
+/* Карта */
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+/* Подвал */
+footer a {
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+footer a:hover {
+  color: #FF00C8;
+  transform: scale(1.2);
+}
+/* Подвал секции */
+footer {
+  background-color: #000;
+  padding: 4rem 1rem;
+  color: #aaa;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-section ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+  color: #FF00C8;
+}
+footer a.social-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+footer a.social-icon:hover {
+  color: #FF00C8;
+  transform: scale(1.2);
+}
+footer .footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  .overlay {
+    padding: 1rem;
+  }
+}
